@@ -27,7 +27,7 @@ To set up the project environment:
 2. Install the required packages:
 
 ```bash
-cd E-TS
+cd E-TS-in-VFL
 pip install -r requirements.txt
 ```
 ## Usage
