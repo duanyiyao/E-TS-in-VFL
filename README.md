@@ -41,10 +41,11 @@ python attack.py --clients_num 7 --config ./config.json --constraint 2 --record_
 ```
 
 ## Citation
-
+```bash
 @inproceedings{duanyi2023constructing,
   title={Constructing Adversarial Examples for Vertical Federated Learning: Optimal Client Corruption through Multi-Armed Bandit},
   author={Duanyi, YAO and Li, Songze and Ye, XUE and Liu, Jin},
   booktitle={The Twelfth International Conference on Learning Representations},
   year={2023}
 }
+```
