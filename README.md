@@ -25,21 +25,20 @@ To set up the project environment:
 
 1. Clone the repository
 2. Install the required packages:
+
+```bash
+cd E-TS
 pip install -r requirements.txt
-
-## Usage
-This is the implementation on FashionMNIST dataset, and the model is designed for 7 clients. If you want to try other datasets and clients, please carefully adjust the model.py. If you want to apply it on the table dataset, please use the table_dis.py for data split and adjust your models.
-
+```
 ## Usage
 
 This implementation is based on the FashionMNIST dataset and the model is designed for 7 clients. If you want to try other datasets and client numbers, please carefully adjust the `model.py` file. For table datasets, use `table_dis.py` for data splitting and adjust your models accordingly.
 
 Example usage:
 
-```bash
+```bash 
 python attack.py --clients_num 7 --config ./config.json --constraint 2 --record_rounds 125 --model_training True --targetd True 
-'''
-
+```
 
 ## Citation
 
