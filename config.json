@@ -1,0 +1,9 @@
+{   "nes": true,
+    "fd_eta": 0.1,
+    "max_queries": 500,
+    "image_lr": 0.25, 
+    "gradient_iters": 10,
+    "batch_size": 32,
+    "budget":0.3,
+    "training_epochs":10
+}
