@@ -37,7 +37,7 @@ This implementation is based on the FashionMNIST dataset and the model is design
 Example usage:
 
 ```bash 
-python attack.py --clients_num 7 --config ./config.json --constraint 2 --record_rounds 125 --model_training True --targetd True 
+python attack.py --clients_num 7 --config ./config.json --constraint 2 --record_rounds 125 --model_training True --targeted True 
 ```
 
 ## Citation
