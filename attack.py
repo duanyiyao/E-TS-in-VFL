@@ -59,11 +59,17 @@ def main(args):
     setup_logging()
     config = load_config(args.config)
     
-    seed = random.randint(10, 1000)
+    seed = args.seed
     logging.info(f"Using seed: {seed}")
+    os.environ['PYTHONHASHSEED'] = str(seed)
     torch.manual_seed(seed)
     random.seed(seed)
     np.random.seed(seed)
+    if torch.cuda.is_available():
+        torch.cuda.manual_seed(seed)
+        torch.cuda.manual_seed_all(seed)
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
 
     device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
     
@@ -172,6 +178,7 @@ if __name__ == "__main__":
     parser.add_argument('--warm_rounds', type=int, default=50, help='The warm rounds in E-TS Alg')
     parser.add_argument('--model_training', type=str2bool, default=False, help='Whether to train the model (True/False)')
     parser.add_argument('--targeted', type=str2bool, default=True, help='Whether to launch the targeted attack (True/False)')
+    parser.add_argument('--seed', type=int, default=3407, required=False, help='Seed for random number generator')
     args = parser.parse_args()
     
     main(args)
